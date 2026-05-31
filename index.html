@@ -13,15 +13,24 @@
     /* 2. bodyに「不透明な単色カラーコード」を指定する */
     body {
         background-color: #faf8f5; /* rgb(250, 248, 245) の16進数表記です */
-        font-size: 2.4vw;
+        font-size:  clamp(18px, 2.4vw, 40px);
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
         font-weight: normal;
-        color: #777}
-    div.message1 {
+        color: #777
+}
+@media (max-width: 768px) {
+
+    body {
+        font-size: 20px;
+    }
+
+
+    }
+div.message1 {
         position: absolute;
-        margin-top: 100px;
-        margin-left: 150px;
-        }
+        top: 8vw;
+        left: 8vw;
+    }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
