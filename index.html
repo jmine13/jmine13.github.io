@@ -4,16 +4,51 @@
   <meta charset="UTF-8">
   <title>ISGRAPH.JP</title>
 <style>
-  body {
-    background-color: #fff;
+    /* 1. まずブラウザの基本余白をゼロにする（必須） */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* 2. bodyに「不透明な単色カラーコード」を指定する */
+    body {
+      background-color: #faf8f5; /* rgb(250, 248, 245) の16進数表記です */
+
+      /* 3. 画像の重ね合わせ設定（background単体プロパティにまとめず、分けて書くと安全です） */
+      background-image: url('./wave.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      background-attachment: fixed;
+
+    width: 100vw;
+    height: 100vh;
     font-size:24px;
     font-family: selif, "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", sans-serif;
     font-weight: normal;
-    color: #111;}
+    color: #777}
+div.message1 {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+div.info {
+    /* position: absolute; */
+    margin-top: 50px;
+    margin-right: 50px;
+}
 </style>
 </head>
 <body>
-  ISGRAPH.JP<br>
-  IS COMING SOON...
+  <div class="message1">
+    ISGRAPH.JP<br>
+    IS COMING SOON...<br><br>
+    INFO@ISGRAPH.JP
+  </div>
+  <div class="info">
+
+  </div>
+
 </body>
 </html>
