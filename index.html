@@ -17,14 +17,15 @@
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
         font-weight: normal;
         color: #777
-}
-@media (max-width: 768px) {
-
-    body {
-        font-size: 20px;
     }
-
-
+@media (max-width: 768px) {
+   body {
+        font-size: 20px;
+        }
+    div.message1 {
+        margin-left: 30px;
+        margin-top: 60px;
+        }
     }
 div.message1 {
         position: absolute;
@@ -41,11 +42,11 @@ div.message1 {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(12);
-}
+    }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-}
+    }
 
 function draw() {
       background(250, 248, 245);
