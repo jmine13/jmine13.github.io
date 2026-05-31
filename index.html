@@ -13,7 +13,7 @@
     /* 2. bodyに「不透明な単色カラーコード」を指定する */
     body {
         background-color: #faf8f5; /* rgb(250, 248, 245) の16進数表記です */
-        font-size: clamp(18px, 2.4vw, 40px);
+        font-size: clamp(18px, 2.4vw, 36px);
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
         font-weight: normal;
         color: #777
@@ -49,14 +49,14 @@ function draw() {
         beginShape();
         for (let x = 0; x < windowWidth; x += 10) {
           let noiseVal = noise(i * (0.007 + time), x * 0.007);
-          let y = 0 + (i * 5) + (noiseVal * 1800);
+          let y = 0 + (i * 5) + (noiseVal * windowHeight * 0.7);
           vertex(x, y);
         }
         endShape();
       }
     }
 </script>
-<div class="message1">
+    <div class="message1">
     ISGRAPH<br><br>
 
     Design<br>
