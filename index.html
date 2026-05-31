@@ -8,23 +8,22 @@
     html, body {
         margin: 0;
         padding: 0;
-        height: 100%;
     }
 
     /* 2. bodyに「不透明な単色カラーコード」を指定する */
     body {
         background-color: #faf8f5; /* rgb(250, 248, 245) の16進数表記です */
 
-      /* 3. 画像の重ね合わせ設定 */
+      /* 3. 画像の重ね合わせ設定
         background-image: url('./wave.png');
         background-size: 100vw;
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: fixed;  */
 
         font-size: 2.4vw;
-        font-family: selif, "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", sans-serif;
+        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
         font-weight: normal;
         color: #777}
     div.message1 {
@@ -33,12 +32,48 @@
         margin-left: 150px;
         }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
+
+
 <body>
-  <div class="message1">
-    ISGRAPH.JP<br>
-    IS COMING SOON...<br><br>
-    INFO@ISGRAPH.JP
+<script>
+    // 上記のp5.jsコードをここに記述します
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  frameRate(60);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+      background(250, 248, 245);
+      noFill();
+      stroke(15, 25, 55, 60);
+      strokeWeight(1);
+      let time = frameCount * 0.005;
+      for (let i = 0; i < windowHeight / 5; i++) {
+        beginShape();
+        for (let x = 0; x < windowWidth; x += 10) {
+          let noiseVal = noise(i * (0.007 + time), x * 0.007);
+          let y = 0 + (i * 5) + (noiseVal * 1800);
+          vertex(x, y);
+        }
+        endShape();
+      }
+    }
+  </script>
+    <div class="message1">
+    ISGRAPH.JP<br><br>
+
+    Design<br>
+    Code<br>
+    Sound<br><br>
+
+    junmine@isgraph.jp
   </div>
   <div class="info">
 
