@@ -1,55 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2SPRGJQGH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L2SPRGJQGH');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ISGRAPH</title>
-<style>
-    /* 1. Remove default browser margins (required) */
-    html, body {
-        margin: 0;
-        padding: 0;
+
+  <link rel="stylesheet" href="style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2SPRGJQGH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
     }
 
-    /* 2. Set an opaque single-color background for the body */
-    body {
-      background-color: #faf8f5; /* Hex representation of rgb(250, 248, 245) */
-        font-size: clamp(18px, 2.4vw, 36px);
-        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-        font-weight: normal;
-        color: #777
-    }
-    div.message1 {
-        position: absolute;
-        top: 8vw;
-        left: 8vw;
-        font-size: clamp(24px, 4vw, 36px);
-        line-height: 1.3;
-    }
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    gtag("js", new Date());
+    gtag("config", "G-L2SPRGJQGH");
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 
-
 <body>
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
+  <main>
     <div class="message1">
-    ISGRAPH<br><br>
-
-    Design<br>
-    Code<br>
-    Sound<br><br>
-
-    junmine@isgraph.jp
-  </div>
+      ISGRAPH<br><br>
+      Design<br>
+      Code<br>
+      Sound<br><br>
+      junmine@isgraph.jp
+    </div>
+  </main>
 </body>
 </html>
